@@ -10,6 +10,7 @@ This file is intentionally small so it can be used during development.
 from __future__ import annotations
 
 from flask import Flask, jsonify, request, send_from_directory
+from flask_cors import CORS
 from typing import Any, Dict
 
 from src.game_logic import GameLogic
@@ -19,6 +20,9 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parents[1]
 
 app = Flask(__name__)
+
+# Enable CORS for the GitHub Pages frontend; restrict to that origin in production
+CORS(app, resources={r"/*": {"origins": "https://joeghvino.github.io"}})
 
 GAME = GameLogic(rows=11, cols=11)
 
