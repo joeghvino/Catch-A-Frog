@@ -14,10 +14,10 @@ python -m http.server 8000
 
 ## Tech
 - Frontend: HTML, CSS, JavaScript (files in root / `css/` / `js/`)
-- Backend (optional): Python (files in `src/`)
+- Backend (): Python (files in `src/`)
 
 ## Installation
-1. (Optional) but recommened Create a virtual environment and install Python dependencies:
+1. (Optional but recommened) Create a virtual environment and install Python dependencies:
 
 ```powershell
 python -m venv .venv
@@ -29,12 +29,6 @@ pip install -r requirements.txt
 
 ## Running the  backend
 - The backend files are in `src/`. If you plan to run any API server, ensure dependencies from `requirements.txt` are installed and run the appropriate module (for example `python src/api.py`) — check `src/api.py` for details.
-
-## GitHub Pages
-To host the static frontend on GitHub Pages:
-
-1. Push this repository to GitHub.
-2. In the repository settings, enable Pages and choose the `main` branch (root) or create and publish a `gh-pages` branch.
 
 ## License
 This project is released under the MIT License — see `LICENSE`.
