@@ -1,0 +1,58 @@
+:root{
+    --hex-size: 55px; /* width of a hex cell */
+    --hex-gap: 8px;
+    --hex-height: calc(var(--hex-size) * 1.15);
+}
+body{font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;margin:18px;background:#f7fbff;color:#0b2540}
+.game-container{max-width:1200px;margin:0 auto}
+h1{font-size:18px;margin:6px 0 12px}
+
+/* Layout for rows */
+.hex-grid{display:flex;flex-direction:column;gap:calc(var(--hex-gap));align-items:flex-start}
+.hex-row{display:flex;gap:calc(var(--hex-gap));}
+.hex-row.odd{margin-left:calc(var(--hex-size) / 2 + var(--hex-gap) / 2)}
+
+/* Hex cell using clip-path polygon */
+.hex-cell{
+    width:var(--hex-size);
+    height:var(--hex-height);
+    display:flex;align-items:center;justify-content:center;
+    /* dark green base for all hexes */
+    background:linear-gradient(180deg,#0b4d1a,#073810);
+    color:#e8f7e9;
+    cursor:pointer;user-select:none;box-shadow:0 2px 6px rgba(0,0,0,0.18);
+    transition:transform .12s ease, box-shadow .12s ease, background .12s ease;
+    clip-path:polygon(25% 0%,75% 0%,100% 50%,75% 100%,25% 100%,0% 50%);
+    position:relative;overflow:hidden;
+}
+.hex-cell:hover{transform:translateY(-6px);box-shadow:0 10px 20px rgba(0,0,0,0.22)}
+.hex-cell .cell-content{font-size:12px;pointer-events:none}
+
+/* selected / frog state */
+.hex-cell.selected{background:linear-gradient(180deg,#1f7a2f,#178226);color:#06240c}
+
+/* frog icon placed inside the cell */
+.frog-icon{
+    position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+    width:120%;height:120%;pointer-events:none;display:block;
+}
+
+/* visible obstacle style so placed obstacles are obvious */
+.hex-cell.obstacle{
+    background:linear-gradient(180deg,#8b3b3b,#5a1f1f);
+    color:#fff;
+    box-shadow:inset 0 0 0 3px rgba(0,0,0,0.12);
+}
+
+/* status text */
+#game-status{font-size:14px}
+
+/* reset button */
+#reset-button{margin-top:12px;padding:8px 12px;border-radius:6px;border:0;background:#0b6ef6;color:white;cursor:pointer}
+#reset-button:active{transform:translateY(1px)}
+
+/* small screens scale down */
+@media (max-width:640px){
+    :root{--hex-size:48px}
+    
+}
