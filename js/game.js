@@ -4,6 +4,9 @@
 
 
 // Frontend of game: fetch and render server state; send clicks to API
+
+const API_BASE = 'https://catch-a-frog.onrender.com'
+
 let board = null;
 let rows = 11; 
 let cols = 11;
@@ -115,7 +118,7 @@ async function onCellClick(ev) {
         return;
     }
     try {
-        const resp = await fetch('/click', {
+        const resp = await fetch(API_BASE + '/click', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ r, c }),
@@ -136,7 +139,7 @@ async function onCellClick(ev) {
 
 async function onResetClick() {
     try {
-        const resp = await fetch('/reset', { method: 'POST' });
+        const resp = await fetch(API_BASE + '/reset', { method: 'POST' });
         if (!resp.ok) throw new Error('Network error');
         const data = await resp.json();
         renderState(data.state || data);
@@ -151,7 +154,7 @@ async function init() {
 
     // fetch server state; if unavailable, fall back to local defaults
     try {
-        const resp = await fetch('/state?cb=' + Date.now(), { cache: 'no-store' });
+        const resp = await fetch(API_BASE + '/state?cb=' + Date.now(), { cache: 'no-store' });
         if (resp.ok) {
             const state = await resp.json();
             console.log('fetched state', state);
