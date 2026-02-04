@@ -1,8 +1,8 @@
 # Catch A Frog
-Personal project by Joseph Ghivniashvili
-Date: 1/14/2026
-A small browser game where the player traps a frog. This repository contains the HTML/CSS/JS front-end and a Python backend for optional server features.
-Inspired by the Cat Trap game.
+-Personal project by Joseph Ghivniashvili
+-Date: 1/14/2026
+-A small browser game where the player traps a frog. This repository contains the HTML/CSS/JS front-end and a Python backend for optional server features.
+-Inspired by the Cat Trap game.
 
 ## Live preview
 - Use the gh pages for the easiest way to demo the game (https://joeghvino.github.io/Catch-A-Frog/)
@@ -18,7 +18,7 @@ python -m http.server 8000
 
 ## Tech
 - Frontend: HTML, CSS, JavaScript (files in root / `css/` / `js/`)
-- Backend (): Python (files in `src/`)
+- Backend (): Python (files in `src/`) - Backend Server running on Render
 
 ## Installation
 1. (Optional but recommened) Create a virtual environment and install Python dependencies:
