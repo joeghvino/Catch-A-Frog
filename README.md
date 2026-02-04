@@ -2,10 +2,14 @@
 Personal project by Joseph Ghivniashvili
 Date: 1/14/2026
 A small browser game where the player traps a frog. This repository contains the HTML/CSS/JS front-end and a Python backend for optional server features.
+Inspired by the Cat Trap game.
 
 ## Live preview
-- Open `Index.html` in your browser (double-click) for a quick demo.
-- Or run a simple local HTTP server and visit http://localhost:8000:
+- Use the gh pages for the easiest way to demo the game (https://joeghvino.github.io/Catch-A-Frog/)
+
+OR 
+
+- run a simple local HTTP server and visit http://localhost:8000:
 
 ```powershell
 cd "C:\Users\19085\OneDrive\Desktop\Catch A Frog Project"
