@@ -6,6 +6,7 @@
 
 ## Live preview
 - Use the gh pages for the easiest way to demo the game (https://joeghvino.github.io/Catch-A-Frog/)
+- (If the game is not loading fully, the render server is offline and you will have to run the backend using the following steps)
 
 OR 
 
