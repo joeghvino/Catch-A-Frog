@@ -1,3 +1,4 @@
+
 # Catch A Frog
 -Personal project by Joseph Ghivniashvili
 -Date: 1/14/2026
@@ -5,6 +6,7 @@
 -Inspired by the Cat Trap game.
 
 ## Live preview
+<img width="800" height="554" alt="ezgif-8e4fa78cc266cdbc" src="https://github.com/user-attachments/assets/2a5810d5-f721-4b3a-bf4f-f5ce13e669a2" />
 - Use the gh pages for the easiest way to demo the game (https://joeghvino.github.io/Catch-A-Frog/)
 - (If the game is not loading fully, the render server is offline and you will have to run the backend using the following steps)
 
